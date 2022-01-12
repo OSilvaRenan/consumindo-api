@@ -1,0 +1,80 @@
+.container{
+    width: 600px;
+    padding: 10px;
+    background-color: darkcyan;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.formulario{
+    list-style: none;
+    margin: 0;
+}
+
+.titulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: cornsilk;
+    margin-bottom: 10px;
+    padding: 0;
+    height: 50px;
+    font-size: 30px;
+}
+
+.opcoes{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.opcao{
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.padrao {
+	background-color:#768d87;
+	border-radius:9px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:5px 6px;
+	text-decoration:none;
+}
+.padrao:hover {
+	background-color:#6c7c7c;
+}
+.padrao:active {
+	position:relative;
+	top:1px;
+}
+
+.sucesso {
+background-color:green;
+	border-radius:9px;
+	border:1px solid darkgreen;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:5px 6px;
+	text-decoration:none;
+}
+.sucesso:hover {
+	background-color:darkgreen;
+}
+.sucesso:active {
+	position:relative;
+	top:1px;
+}

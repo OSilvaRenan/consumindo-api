@@ -49,7 +49,7 @@ export default function List() {
   return (
     <Container>
       <div className={styles.menu}>
-        <Link to={`/editora/create`}><button className={styles.novo}>Criar Novo</button></Link>
+        <Link to={`/editora/create`}><button className={styles.novo}>Criar Nova</button></Link>
       </div> 
       <div className={styles.editoras}>
         {editoras}
