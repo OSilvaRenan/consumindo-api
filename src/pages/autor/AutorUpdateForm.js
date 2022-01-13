@@ -23,7 +23,6 @@ export default function Update() {
     });
   }, []);
 
-
   function onChange(ev){
     const {name, value} = ev.target;
     setValues({...values, [name]: value})
