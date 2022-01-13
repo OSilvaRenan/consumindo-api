@@ -12,9 +12,9 @@ function Form(props){
 
                 { props.tabela == "autor" ? 
                     <div>
-                        <Input type="text" text="Nome Autor:" name="nomautor" placeholder="Digite o Nome do Autor" onChange={props.onChange}/>
-                        <Input type="text" text="Código de Integração:" name="codintegracao" placeholder="Digite o Código de Integração" onChange={props.onChange}/>
-                        <Input type="text" text="Descrição do Autor:" name="dscautor" placeholder="Digite a Descrição do Autor"  onChange={props.onChange}/>
+                        <Input type="text" text="Nome Autor:" name="nomautor" placeholder="Digite o Nome do Autor" value={props.value.Nomautor} onChange={props.onChange}/>
+                        <Input type="text" text="Código de Integração:" name="codintegracao" placeholder="Digite o Código de Integração" value={props.value.Codintegracao} onChange={props.onChange}/>
+                        <Input type="text" text="Descrição do Autor:" name="dscautor" placeholder="Digite a Descrição do Autor" value={props.value.Dscautor} onChange={props.onChange}/>
                     </div>
                     :  
                     <div>

@@ -21,17 +21,21 @@ export default function Update() {
     }).catch(error => {
       setError(error);
     });
+
   }, []);
 
   function onChange(ev){
-    const {name, value} = ev.target;
-    setValues({...values, [name]: value})
+    const {value, name} = ev.target;
+    console.log("name: ", name);
+    console.log("value: ", value);
+
+    setAutor({...autor, [name]: value})
 }
 
   function updateAutor(ev) {
      ev.preventDefault();
       api
-      .put(`/autor/${autor.Codautor}`, values)
+      .put(`/autor/${autor.Codautor}`, autor)
       .then((response) => {
         setAutor(response.data);
         alert("Autor Atualizado!");
@@ -46,7 +50,7 @@ export default function Update() {
 
   return (
     <Container>
-      <Form title="Editar Autor" tabela="autor" onChange={onChange} onSubmit={updateAutor} value={values}/>
+        <Form title="Editar Autor" tabela="autor" onChange={onChange} onSubmit={updateAutor} value={autor}/>
     </Container>
   );
 }
