@@ -18,7 +18,6 @@ function Form(props){
                     </div>
                     :  
                     <div>
-                        <h1 className={styles.titulo}>Nova Editora</h1>
                         <Input type="text" text="Nome Editora:" name="nomeditora" placeholder="Digite o Nome da Editora" onChange={props.onChange}/>
                         <Input type="text" text="Código de Integração:" name="codintegracao" placeholder="Digite o Código de Integração" onChange={props.onChange}/>
                     </div>  

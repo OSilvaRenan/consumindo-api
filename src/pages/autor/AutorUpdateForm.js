@@ -25,11 +25,13 @@ export default function Update() {
   }, []);
 
   function onChange(ev){
-    const {value, name} = ev.target;
-    console.log("name: ", name);
-    console.log("value: ", value);
+    // const {value, name} = ev.target;
+    // console.log("name: ", name);
+    // console.log("value: ", value);
 
-    setAutor({...autor, [name]: value})
+    // setAutor({...autor, [name]: value})
+
+    this.setState({[ev.target.name]:ev.target.value});
 }
 
   function updateAutor(ev) {
