@@ -2,8 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; 
 import api from "../../Api";
 import Container from "../../layout/Container";
-import Form from "../../layout/Componentes/Form";
 import { useState } from 'react/cjs/react.development';
+import FormAutor from "../../layout/Componentes/forms/FormAutor";
 
 export default function Create() {
  
@@ -43,7 +43,7 @@ export default function Create() {
 
   return (
     <Container>
-        <Form title="Novo Autor" tabela="autor" onChange={onChange} onSubmit={createAutor} value={values}/>
+        <FormAutor title="Novo Autor" onChange={onChange} onSubmit={createAutor} value={values}/>
     </Container>
   );
 }

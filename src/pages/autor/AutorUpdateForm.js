@@ -1,19 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import Container from "../../layout/Container";
 import {useParams, useNavigate} from "react-router-dom"; 
 import api from "../../Api";
-import { useState } from "react/cjs/react.development";
-import Form from "../../layout/Componentes/Form";
-
-
+import FormAutor from "../../layout/Componentes/forms/FormAutor";
 
 export default function Update() {
 
-  const [autor, setAutor] = React.useState(null);
-  const [error, setError] = React.useState(null);
+  // const autor = {Codautor: 0, Nomautor: '', Codintegracao: '', Dscautor: ''};
+  // setState({autor});
+  
+  const [autor, setAutor] = useState({Codautor: 0, Nomautor: '', Codintegracao: '', Dscautor: ''});
+  const [error, setError] = useState(null);
   const { id } = useParams();
   const navigate = useNavigate();
-  const [values, setValues] = useState({});
+  // const [values, setValues] = useState({});
   
   React.useEffect(() => {
     api.get(`/autor/${id}`).then((response) => {
@@ -25,13 +25,17 @@ export default function Update() {
   }, []);
 
   function onChange(ev){
-    // const {value, name} = ev.target;
-    // console.log("name: ", name);
-    // console.log("value: ", value);
+    // const autor = {...this.state.autor};
+    // autor[ev.target.name] = ev.target.value;
+    // setAutor(autor);
 
-    // setAutor({...autor, [name]: value})
+    const {value, name} = ev.target;
+     console.log("name: ", name);
+     console.log("value: ", value);
 
-    this.setState({[ev.target.name]:ev.target.value});
+    setAutor({...autor, [name]: value})
+
+    // this.setState({autor});
 }
 
   function updateAutor(ev) {
@@ -52,7 +56,7 @@ export default function Update() {
 
   return (
     <Container>
-        <Form title="Editar Autor" tabela="autor" onChange={onChange} onSubmit={updateAutor} value={autor}/>
+        <FormAutor title="Editar Autor" onChange={onChange} onSubmit={updateAutor} value={autor}/>
     </Container>
   );
 }

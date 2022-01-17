@@ -1,19 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import Container from "../../layout/Container";
 import {useParams, useNavigate} from "react-router-dom"; 
 import api from "../../Api";
-import { useState } from "react/cjs/react.development";
-import Form from "../../layout/Componentes/Form";
-
+import FormEditora from "../../layout/Componentes/forms/FormEditora";
 
 export default function Update() {
 
-  const [editora, setEditora] = React.useState(null);
-  const [error, setError] = React.useState(null);
+  const [editora, setEditora] = useState(null);
+  const [error, setError] = useState(null);
 
   const { id } = useParams();
   const navigate = useNavigate();
-  const [values, setValues] = useState({});
+
 
   React.useEffect(() => {
     api.get(`/editora/${id}`).then((response) => {
@@ -25,13 +23,13 @@ export default function Update() {
 
   function onChange(ev){
     const {name, value} = ev.target;
-    setValues({...values, [name]: value})
+    setEditora({...editora, [name]: value})
 }
 
   function updateEditora(ev) {
     ev.preventDefault();
       api
-      .put(`/editora/${editora.Codeditora}`,values)
+      .put(`/editora/${editora.Codeditora}`, editora)
       .then((response) => {
         setEditora(response.data);
         alert("Editora Atualizada!");
@@ -46,7 +44,7 @@ export default function Update() {
 
   return (
     <Container>
-     <Form title="Editar Editora" tabela="editora" onChange={onChange} onSubmit={updateEditora} value={values}/>
+     <FormEditora title="Editar Editora" onChange={onChange} onSubmit={updateEditora} value={editora}/>
   </Container>
   );
 }

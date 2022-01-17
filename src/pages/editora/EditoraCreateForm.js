@@ -1,9 +1,9 @@
 import React from "react";
-import { useNavigate, Link} from "react-router-dom"; 
+import { useNavigate} from "react-router-dom"; 
 import api from "../../Api";
 import Container from "../../layout/Container";
 import { useState } from 'react/cjs/react.development';
-import Form from "../../layout/Componentes/Form";
+import FormEditora from "../../layout/Componentes/forms/FormEditora";
 
 export default function Create() {
 
@@ -44,7 +44,7 @@ export default function Create() {
 
   return (
     <Container>
-       <Form tabela="editora" titulo="Nova Editora" onChange={onChange} onSubmit={createEditora} value={values}/>
+       <FormEditora titulo="Nova Editora" onChange={onChange} onSubmit={createEditora} value={values}/>
     </Container>
   );
 }
