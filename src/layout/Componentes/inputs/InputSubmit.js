@@ -4,8 +4,7 @@ function InputSubmit(props){
 
     return(
         <div className={styles.campos}>
-            <label className={styles.label} htmlFor={props.name}>{props.text}</label>
-            <input className={styles.input} type="submit" id={props.name} name={props.name} placeholder={props.placeholder} onChange={props.onChange} value={props.value == null ? '': props.value}/>
+            <input className={styles.inputSubmit} type="submit" id={props.name} name={props.name} value={props.value}/>
         </div>     
     )
 }

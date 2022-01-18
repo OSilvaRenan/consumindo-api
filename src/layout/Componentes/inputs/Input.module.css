@@ -9,7 +9,7 @@
     justify-content: flex-end;
 }
 
-.inputButton {
+.inputButton, .inputReset {
     background-color:#768d87;
 	border-radius:9px;
 	border:1px solid #566963;
@@ -22,33 +22,64 @@
 	padding:5px 6px;
 	text-decoration:none;
 }
-.inputButton:hover {
+.inputButton:hover, .inputReset:hover {
     background-color:#6c7c7c;
 }
-.inputButton:active {
+.inputButton:active, .inputReset:active {
     position:relative;
 	top:1px;
 }
 
-.InputCheckbox{
+.inputCheckbox{
     width: 30px;
     border-radius:9px;
 }
 
-.InputCheckbox:checked{
+.inputCheckbox:checked{
     width: 30px;
-    border-radius:9px;
+    border-radius:9px; 
 }
 
 .labelCheckbox{
     margin-left: 10px;
 }
 
-.labelColor{
-    margin-right: 10px;
+.labelRadio{
+    margin-left: 10px;
 }
 
-.text{
+.inputSubmit {
+    background-color:green;
+        border-radius:9px;
+        border:1px solid darkgreen;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:20px;
+        font-weight:bold;
+        padding:5px 6px;
+        text-decoration:none;
+    }
+    .inputSubmit:hover {
+        background-color:darkgreen;
+    }
+    .inputSubmit:active {
+        position:relative;
+        top:1px;
+    }
+
+    .inputDatetimelocal, .inputDate, .inputTime{
+        padding: 5px;
+        border-width: 2px;
+        border-radius: 5px;
+        border-style: hidden;
+        width: auto;
+        padding: 10px;
+        margin: 5px;
+    }
+
+.inputText, .inputUrl, .inputTel, .inputSearch, .inputNumber, .inputEmail, .inputFile{
     padding: 5px;
     border-width: 2px;
     border-radius: 5px;
@@ -57,7 +88,7 @@
     padding: 10px;
     margin: 5px;
 }
-.label{
+.labelText, .labelUrl, .labelTel, .labelSearch, .labelNumber, .labelEmail, .labelDatetimelocal, .labelDate, .labelTime, .labelFile, .labelColor{
     font-weight: bold;
     width:  200px;
     vertical-align: center;

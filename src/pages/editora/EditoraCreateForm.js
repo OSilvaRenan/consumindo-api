@@ -2,13 +2,12 @@ import React from "react";
 import { useNavigate} from "react-router-dom"; 
 import api from "../../Api";
 import Container from "../../layout/Container";
-import { useState } from 'react/cjs/react.development';
 import FormEditora from "../../layout/Componentes/forms/FormEditora";
 
 export default function Create() {
 
   const [editora, setEditora] = React.useState(null);
-  const [error, setError] = React.useState(null);
+  const [error, setError] = React.useStatee(null);
   const [values, setValues] = useState({});
 
   const navigate = useNavigate();

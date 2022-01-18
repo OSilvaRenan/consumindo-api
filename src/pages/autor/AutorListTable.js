@@ -18,7 +18,7 @@ export default function List() {
   }, []);
 
   if (error) return `Erro: ${error.message}`;
-  if (!autor) return "Autor não encontrada!";
+  if (!autor) return "Autor não encontrado!";
 
   const autores = autor.map((autor) =>
    <table className={styles.card} key={autor.Codautor}>

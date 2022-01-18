@@ -19,6 +19,7 @@ import InputImage from "../inputs/InputImage";
 import InputRadio from "../inputs/InputRadio";
 import InputReset from "../inputs/InputReset";
 import InputSubmit from "../inputs/InputSubmit";
+import InputTime from "../inputs/InputTime";
 
 function FormTeste(props){
 
@@ -32,19 +33,19 @@ function FormTeste(props){
                 <InputColor text="InputColor" name="InputColor" onChange={props.onChange}/>
                 <InputDate text="InputDate" name="InputDate" onChange={props.onChange}/>
                 <InputDatetimelocal text="InputDatetimelocal" name="InputDatetimelocal" onChange={props.onChange}/>
-                
                 <InputEmail text="InputEmail" name="InputEmail" onChange={props.onChange}/>
                 <InputFile text="InputFile" name="InputFile" onChange={props.onChange}/>
                 <InputHidden text="InputHidden" name="InputHidden" onChange={props.onChange}/>
-                <InputImage text="InputImage" name="InputImage" onChange={props.onChange}/>
+                <InputImage text="InputImage" name="InputImage" onChange={props.onChange} src="#"/>
                 <InputNumber text="InputNumber" name="InputNumber" onChange={props.onChange}/>
                 <InputRadio text="InputRadio" name="InputRadio" onChange={props.onChange}/>
-                <InputRange text="InputRange" name="InputRange" onChange={props.onChange}/>
-                <InputReset text="InputReset" name="InputReset" onChange={props.onChange}/>
+                <InputRange text="InputRange" name="InputRange" onChange={props.onChange} min="0" max="11" step="1"/>
+                <InputReset name="InputReset" value="InputReset"/>
                 <InputSearch text="InputSearch" name="InputSearch"onChange={props.onChange}/>
-                <InputSubmit text="InputSubmit" name="InputSubmit"onChange={props.onChange}/>
-                <InputTel text="InputTel" name="InputTel" onChange={props.onChange}/>
+                <InputSubmit name="InputSubmit" value="InputSubmit"/>
+                <InputTel text="InputTel" name="InputTel" onChange={props.onChange} pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
                 <InputText text="InputText" name="InputText" onChange={props.onChange}/>
+                <InputTime text="InputTime" name="InputTime" onChange={props.onChange}/>
                 <InputUrl text="InputUrl" name="InputUrl" onChange={props.onChange}/>
                 
                 <div className={styles.opcoes}>

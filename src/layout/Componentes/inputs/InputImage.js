@@ -4,8 +4,8 @@ function InputImage(props){
 
     return(
         <div className={styles.campos}>
-            <label className={styles.label} htmlFor={props.name}>{props.text}</label>
-            <input className={styles.input} type="image" id={props.name} name={props.name} placeholder={props.placeholder} onChange={props.onChange} value={props.value == null ? '': props.value}/>
+            <label className={styles.labelImage} htmlFor={props.name}>{props.text}</label>
+            <input className={styles.inputImage} type="image" id={props.name} name={props.name} src={props.src} alt={props.alt} onChange={props.onChange} value={props.value == null ? '': props.value}/>
         </div>     
     )
 }

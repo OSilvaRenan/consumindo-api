@@ -4,8 +4,8 @@ function InputSearch(props){
 
     return(
         <div className={styles.campos}>
-            <label className={styles.label} htmlFor={props.name}>{props.text}</label>
-            <input className={styles.input} type="search" id={props.name} name={props.name} placeholder={props.placeholder} onChange={props.onChange} value={props.value == null ? '': props.value}/>
+            <label className={styles.labelSearch} htmlFor={props.name}>{props.text}</label>
+            <input className={styles.inputSearch} type="search" id={props.name} name={props.name} placeholder={props.placeholder} onChange={props.onChange} value={props.value} aria-label={props.aria_label}/>
         </div>     
     )
 }
